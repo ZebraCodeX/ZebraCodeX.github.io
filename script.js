@@ -1,5 +1,37 @@
 // Initialize 3D Space Portfolio
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const sun = themeToggle.querySelector('.sun');
+    const moon = themeToggle.querySelector('.moon');
+    
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.body.classList.add('light-theme');
+        themeToggle.style.display = 'flex';
+        sun.style.display = 'none';
+        moon.style.display = 'block';
+    } else {
+        themeToggle.style.display = 'flex';
+    }
+    
+    themeToggle.addEventListener('click', () => {
+        if (document.body.classList.contains('light-theme')) {
+            document.body.classList.remove('light-theme');
+            localStorage.setItem('theme', 'dark');
+            sun.style.display = 'block';
+            moon.style.display = 'none';
+        } else {
+            document.body.classList.add('light-theme');
+            localStorage.setItem('theme', 'light');
+            sun.style.display = 'none';
+            moon.style.display = 'block';
+        }
+    });
+    
     // Mouse parallax effect for hero background
     const hero = document.querySelector('.hero');
     let mouseX = 0, mouseY = 0;
@@ -33,18 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Navbar scroll effect
-    const header = document.querySelector('header');
+    const header = document.querySelector('#mainNav');
     let lastScroll = 0;
     
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
         
         if (currentScroll > 100) {
-            header.style.background = 'rgba(10, 10, 30, 0.98)';
-            header.style.boxShadow = '0 20px 40px -20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 136, 0.3)';
+            header.classList.add('scrolled');
         } else {
-            header.style.background = 'rgba(10, 10, 30, 0.95)';
-            header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 136, 0.2)';
+            header.classList.remove('scrolled');
         }
         
         lastScroll = currentScroll;
