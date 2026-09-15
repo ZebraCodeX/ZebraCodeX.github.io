@@ -9,21 +9,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div class="container">
-            <nav id="mainNav" class="">
-                <div class="logo">ZebraCodeX</div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
-                </ul>
-            </nav>
-        </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary" id="mainNav">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ZebraCodeX</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-links">
+           <div class="logo"></div>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
 
     <!-- Hero Section with 3D Space -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero text-center">
         <div class="space-background">
             <canvas id="spaceCanvas"></canvas>
             <div class="mars-planet"></div>
@@ -31,7 +38,7 @@
 
         <div class="hero-content">
             <h1>Zee-Smith</h1>
-            <p class="subtitle">Professional Engineer</p>
+            <p class="subtitle">The Professional Engineer</p>
             <p class="tagline">Bridging hardware and software through industrial automation and data center systems</p>
             <a href="#projects" class="cta-button">Explore My Work</a>
         </div>
