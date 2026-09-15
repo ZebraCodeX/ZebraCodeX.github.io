@@ -70,12 +70,12 @@ body::after {
     opacity: 0.8;
 }
 
-/* 3D Container */
-.page {
+/* Body with 3D Perspective */
+body {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    overflow-x: hidden;
     perspective: 1000px;
+    perspective-origin: 50% 50%;
 }
 
 /* Floating Navigation */
@@ -85,6 +85,8 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     z-index: 200;
+    width: calc(100% - 40px);
+    max-width: 1200px;
     background: rgba(10, 10, 30, 0.8);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(0, 255, 136, 0.3);
@@ -92,10 +94,10 @@ nav {
     padding: 12px 24px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 136, 0.2);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 20px;
 }
 
 nav:hover {
-    transform: translateX(-50%) translateY(-6px);
     border-color: rgba(0, 255, 136, 0.5);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 255, 136, 0.3);
 }
@@ -158,6 +160,7 @@ nav:hover {
     padding: 120px 20px 0;
     position: relative;
     overflow: hidden;
+    background: var(--bg-deep);
 }
 
 .hero::before {
@@ -167,13 +170,10 @@ nav:hover {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 255, 136, 0.08) 0%, transparent 50%);
-    animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    background: radial-gradient(circle at 30% 20%, rgba(0, 255, 136, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(187, 19, 254, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-content {
