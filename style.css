@@ -179,4 +179,34 @@ header .container {
     z-index: 3;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%, #e27b58, #c1440e);
+.mars-planet {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 5%;
+    top: 20%;
+    z-index: 3;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 30% 30%,
+        #e27b58,
+        #c1440e
+    );
+    box-shadow:
+        inset -25px -25px 50px rgba(0, 0, 0, 0.45),
+        0 0 60px rgba(225, 80, 40, 0.35);
+    animation: floatPlanet 6s ease-in-out infinite;
+}
+
+@keyframes floatPlanet {
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -20px;
+    }
+}
+
     
