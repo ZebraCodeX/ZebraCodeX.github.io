@@ -3,212 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZebraCodeX - Professional Engineer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Zee-Smith | Professional Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav id="mainNav">
                 <div class="logo">ZebraCodeX</div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" style="display: none; margin-left: 16px;">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
-                    </button>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <!-- Hero Section with 3D Space -->
+    <section id="hero" class="hero">
+        <div class="space-background">
+            <canvas id="spaceCanvas"></canvas>
+            <div class="mars-planet"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1>Zee-Smith</h1>
+            <p class="subtitle">Professional Engineer</p>
+            <p class="tagline">Industrial Automation × Data Center Systems × Software Engineering</p>
+            <a href="#projects" class="cta-button">Explore My Work</a>
+        </div>
+
+        <div class="floating-card">
+            <div class="card-icon">🚀</div>
+            <p>Building tomorrow's systems today</p>
+        </div>
+
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
         <div class="container">
-            <div class="hero-content">
-                <h1> Zee-Smith </h1>
-                <h2>The Professional Engineer</h2>
-                <p>Industrial automation & Data Center Engineer Operator</p>
-                <a href="#projects" class="btn">View Projects</a>
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    I'm a <span class="engineer-badge">Professional Engineer</span> specializing in Industrial Automation, Data Center Infrastructure Systems, and Software Engineering. With hands-on expertise spanning mechanical systems, embedded controls, and full-stack software development, I bridge the gap between hardware and software to deliver robust, scalable solutions.
+                </p>
+                <p>
+                    My background encompasses PLC programming, real-time process control, SCADA systems, and mechanical-software integration. I'm passionate about solving complex engineering challenges through automation and data-driven insights.
+                </p>
+                <p>
+                    When I'm not engineering solutions, I contribute to open-source projects and continuously expand my skills across emerging technologies.
+                </p>
             </div>
         </div>
     </section>
 
-    <main class="container">
-        <section id="about" class="about">
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
             <div class="section-header">
-                <h2>About Me</h2>
+                <h2>Skills & Expertise</h2>
             </div>
-            <div class="about-content">
-                <p>I am a professional Engineer by trade with hands-on experience in mechanical systems, industrial automation, and embedded controls. As a self-taught software engineer, I bridge the gap between physical engineering systems and digital solutions.</p>
-                
-                <p>My background is rooted in professional engineering principles - mechanical design, system analysis, and industrial automation. I bring a practical, problem-solving mindset to every project, whether I'm programming PLCs, integrating mechanical systems, or building software tools.</p>
-                
-                <p>I specialize in integrating software solutions with mechanical and industrial systems. From PLC programming and industrial communication protocols to CAD integration and mechatronics, I apply engineering rigor to close the gap between hardware and code.</p>
-                
-                <p>I thrive on solving complex challenges that require both engineering precision and software capability. My approach emphasizes practical solutions, maintainable architecture, and real-world performance across the full stack.</p>
-                
-                <div class="engineer-badge">Professional Engineer · Self-Taught Software Development</div>
-            </div>
-        </section>
 
-        <section id="skills" class="skills">
-            <div class="section-header">
-                <h2>Core Competencies</h2>
-            </div>
             <div class="skills-grid">
-                
+                <!-- PLC & Industrial Automation -->
                 <div class="skill-category">
-                    <h3>PLC & Industrial Automation 🏭</h3>
+                    <h3>🤖 PLC & Industrial Automation</h3>
                     <ul>
-                        <li>Programmable Logic Controller programming</li>
-                        <li>Real-time process control and monitoring</li>
-                        <li>Industrial communication protocols (Modbus, MQTT)</li>
-                        <li>SCADA system integration</li>
-                        <li>Hardware-in-the-loop testing</li>
+                        <li>PLC Programming & Logic Design</li>
+                        <li>Real-time Process Control</li>
+                        <li>Modbus, MQTT, OPC UA</li>
+                        <li>SCADA Systems</li>
+                        <li>Hardware-in-the-loop Testing</li>
+                        <li>HMI Development</li>
                     </ul>
                 </div>
-                
+
+                <!-- Data Center Infrastructure -->
                 <div class="skill-category">
-                    <h3>Data center infrastructure Systems Integration 🔧</h3>
+                    <h3>🏢 Data Center Infrastructure</h3>
                     <ul>
-                        <li>Maintaining and managing the physical systems that support data centers, 
-                            including electrical, mechanical, and cooling systems</li>
-                        <li>Mechanical component integration with software</li>
-                        <li>CAD and technical drawing interpretation</li>
-                        <li>Mechatronics system architecture</li>
-                        <li>Sensor integration and data acquisition</li>
-                        <li>Prototyping and iterative design</li>
+                        <li>Physical Systems Design (Electrical, Mechanical, Cooling)</li>
+                        <li>Systems Integration & Commissioning</li>
+                        <li>CAD & Mechatronics</li>
+                        <li>Sensor Integration & Data Acquisition</li>
+                        <li>Prototyping & Testing</li>
+                        <li>Infrastructure Monitoring</li>
                     </ul>
                 </div>
-                
+
+                <!-- Software Development -->
                 <div class="skill-category">
-                    <h3>Software Development 💻</h3>
+                    <h3>💻 Software Development</h3>
                     <ul>
-                        <li>Backend: Python (Flask, Django), Java (Spring Boot), Node.js</li>
-                        <li>Frontend: HTML5, CSS3, JavaScript, React</li>
-                        <li>GUI/Desktop: PyQt5/6, Tkinter, jQuery</li>
-                        <li>Tools: Git, Docker, CI/CD pipelines</li>
-                        <li>Methodologies: Agile/Scrum</li>
+                        <li>Python (Flask, Django)</li>
+                        <li>Java (Spring Boot)</li>
+                        <li>JavaScript & React</li>
+                        <li>HTML5, CSS3</li>
+                        <li>Node.js & Express</li>
+                        <li>Docker & CI/CD</li>
+                        <li>Git & Agile/Scrum</li>
                     </ul>
                 </div>
-                
-            </div>
-        </section>
 
-       <!-- ========================================================================
-     PROJECTS SECTION
-     ======================================================================== -->
-<section id="projects" class="projects">
-    <div class="container">
-        <div class="section-header">
-            <h2>Selected Projects</h2>
-            <p>A showcase of industrial automation, NLP, and full-stack development work</p>
-        </div>
-
-        <div class="projects-grid">
-            <!-- Project 1: Amharic Keyboard & Spell Corrector -->
-            <div class="project-card">
-                <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                    🔤
-                </div>
-                <div class="project-info">
-                    <h3>Amharic Keyboard & Spell Corrector</h3>
-                    <p>Spelling corrector with Bible-enhanced dictionary and on-screen keyboard web UI. Implements Symmetric Delete algorithm for fast correction with optimized Python backend.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Algorithm</span>
-                        <span>Web UI</span>
-                    </div>
-                    <a href="https://github.com/ZebraCodeX/amharic-keyboard-and-spell-corrector" target="_blank" rel="noopener noreferrer" class="project-btn">View on GitHub</a>
-                </div>
-            </div>
-
-            <!-- Project 2: Werket - Amharic Document Editor -->
-            <div class="project-card">
-                <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                    📝
-                </div>
-                <div class="project-info">
-                    <h3>Werket - Amharic Document Editor</h3>
-                    <p>PWA document editor with Fidel phonetic input, dictionary-backed spell checking, and NLP predictions. Built with JavaScript for cross-platform accessibility.</p>
-                    <div class="project-tags">
-                        <span>JavaScript</span>
-                        <span>PWA</span>
-                        <span>NLP</span>
-                    </div>
-                    <a href="https://github.com/ZebraCodeX/Werket" target="_blank" rel="noopener noreferrer" class="project-btn">View on GitHub</a>
-                </div>
-            </div>
-
-            <!-- Project 3: Spring Boot Student Management System -->
-            <div class="project-card">
-                <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                    🎓
-                </div>
-                <div class="project-info">
-                    <h3>Spring Boot Student Management System</h3>
-                    <p>Enterprise Java application for student record management. Implements Spring Boot, JPA, and REST API endpoints demonstrating Java enterprise architecture mastery.</p>
-                    <div class="project-tags">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>REST API</span>
-                    </div>
-                    <a href="https://github.com/ZebraCodeX/Java-Spring-boot-Student-Management-System" target="_blank" rel="noopener noreferrer" class="project-btn">View on GitHub</a>
-                </div>
-            </div>
-
-            <!-- Project 4: Simple Calculator (PyQt5) -->
-            <div class="project-card">
-                <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                    🧮
-                </div>
-                <div class="project-info">
-                    <h3>Simple Calculator (PyQt5)</h3>
-                    <p>Fully functional calculator GUI with PyQt5. Demonstrates GUI development skills, event handling, and user-friendly interface design with responsive layout.</p>
-                    <div class="project-tags">
-                        <span>PyQt5</span>
-                        <span>GUI Design</span>
-                        <span>Python</span>
-                    </div>
-                    <a href="https://github.com/ZebraCodeX/simple_calculator" target="_blank" rel="noopener noreferrer" class="project-btn">View on GitHub</a>
+                <!-- Desktop Applications -->
+                <div class="skill-category">
+                    <h3>🖥️ Desktop & UI</h3>
+                    <ul>
+                        <li>PyQt5/6 Development</li>
+                        <li>Tkinter</li>
+                        <li>Event Handling & UX Design</li>
+                        <li>Cross-platform Development</li>
+                        <li>GUI Testing</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-        <section id="contact" class="contact">
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
             <div class="section-header">
-                <h2>Contact</h2>
+                <h2>Featured Projects</h2>
             </div>
-            <div class="contact-content">
-                <p>Let's build something remarkable together.</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="icon">📧</span>
-                        <span>2313zee@pm.me</span>
+
+            <div class="projects-grid">
+                <!-- Werket -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); font-size: 80px;">📝</div>
+                    <div class="project-info">
+                        <h3>Werket - Amharic Document Editor</h3>
+                        <p>A progressive web app (PWA) document editor with Fidel phonetic input, dictionary-backed spell checking, and NLP predictions.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <a href="https://github.com/ZebraCodeX/Werket" class="project-link" target="_blank">View on GitHub →</a>
                     </div>
-                    <div class="contact-item">
-                        <span class="icon">💻</span>
-                        <span>github.com/ZebraCodeX</span>
+                </div>
+
+                <!-- Spring Boot Student Management -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); font-size: 80px;">🎓</div>
+                    <div class="project-info">
+                        <h3>Spring Boot Student Management System</h3>
+                        <p>Enterprise Java application for comprehensive student record management using JPA, REST API, and modern web technologies.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <a href="https://github.com/ZebraCodeX/Java-Spring-boot-Student-Management-System" class="project-link" target="_blank">View on GitHub →</a>
                     </div>
-                    <div class="contact-item">
-                        <span class="icon">🌐</span>
-                        <span>ZebraCodeX.github.io</span>
+                </div>
+
+                <!-- Simple Calculator -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); font-size: 80px;">🧮</div>
+                    <div class="project-info">
+                        <h3>Simple Calculator (PyQt5)</h3>
+                        <p>GUI-based calculator application demonstrating event handling, user interface design, and responsive interaction patterns.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyQt5</span>
+                            <span class="tech-tag">GUI</span>
+                        </div>
+                        <a href="https://github.com/ZebraCodeX/simple_calculator" class="project-link" target="_blank">View on GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Amharic Keyboard -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); font-size: 80px;">🔤</div>
+                    <div class="project-info">
+                        <h3>Amharic Keyboard & Spell Corrector</h3>
+                        <p>Advanced spelling corrector with Bible-enhanced dictionary, web UI, and implementation of the Symmetric Delete algorithm.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Web</span>
+                        </div>
+                        <a href="https://github.com/ZebraCodeX/amharic-keyboard-and-spell-corrector" class="project-link" target="_blank">View on GitHub →</a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+            </div>
+
+            <div class="contact-content">
+                <p>I'm always interested in hearing about new projects and opportunities.</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:2313zee@pm.me" class="contact-btn email">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>2313zee@pm.me</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/ZebraCodeX" class="contact-btn github" target="_blank">
+                        <span class="icon">💻</span>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>github.com/ZebraCodeX</p>
+                        </div>
+                    </a>
+                    <a href="https://ZebraCodeX.github.io" class="contact-btn website" target="_blank">
+                        <span class="icon">🌐</span>
+                        <div>
+                            <h4>Website</h4>
+                            <p>ZebraCodeX.github.io</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>2026 ZebraCodeX. Professional Engineer - Industrial Automation & Software Integration</p>
+            <p>&copy; 2024 Zee-Smith. All rights reserved.</p>
         </div>
     </footer>
 
