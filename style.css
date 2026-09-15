@@ -246,3 +246,24 @@
         display: none;
     }
 }
+
+@keyframes meteor {
+    0% {
+        transform: translateX(-100px) translateY(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(1000px) translateY(1000px);
+        opacity: 0;
+    }
+}
+
+.meteor {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
+    animation: meteor 1.5s linear infinite;
+}
+
