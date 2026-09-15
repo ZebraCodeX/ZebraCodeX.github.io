@@ -116,12 +116,10 @@ function initParallax() {
     function updateParallax() {
         const scrolled = window.pageYOffset || window.scrollY;
 
-        if (scrolled < window.innerHeight) {
-            mars.style.transform = `
-                translateY(${scrolled * 0.5}px)
-                rotate(${scrolled * 0.1}deg)
-            `;
-        }
+        mars.style.transform = `
+            translateY(${scrolled * 0.3}px)
+            rotate(${scrolled * 0.05}deg)
+        `;
 
         ticking = false;
     }
@@ -234,19 +232,14 @@ function initSmoothScroll() {
 
     navigationLinks.forEach((link) => {
         link.addEventListener("click", (event) => {
+            event.preventDefault();
+
             const targetId = link.getAttribute("href");
-
-            if (!targetId || targetId === "#") {
-                return;
-            }
-
             const target = document.querySelector(targetId);
 
             if (!target) {
                 return;
             }
-
-            event.preventDefault();
 
             target.scrollIntoView({
                 behavior: "smooth",
